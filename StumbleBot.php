@@ -10,7 +10,7 @@ $headers[] = 'use_response_compression: true';
 
 echo "\n";
 while (1) {
-    $gas = curl('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/3', null, $headers);
+    $gas = curl('http://kitkabackend.eastus.cloudapp.azure.com:5010/round/finishv2/2', null, $headers);
     if (strpos($gas[1], '"User":{"Id"')) {
         $res = json_decode($gas[1]);
         $name = $res->User->Username;
